@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------
+// ----------------------- banner ----------------------- //
+
+// container general
+.page-node-type-page,
+.page-node-type-cursos-y-talleres{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			div[role="heading"]{
+				
+				section{
+					
+					&:nth-child(1){
+						
+						@include bg-carrusel;
+						
+						@media screen and (max-width: $breakpoint_4){
+							display: flex;
+							flex-direction: column;
+						}
+						
+						// title
+						.field--name-field-titulo-del-cabezote,
+						.views-field-title{
+							@include title-carrusel;
+						}
+						
+						// description
+						.field--name-field-texto-del-cabezote,
+						.views-field-field-bocadillo-del-banner{
+							@include description-carrusel;
+						}
+						
+						// image
+						.field--name-field-imagen-del-cabezote,
+						.views-field-field-imagen-del-curso-taller{
+							@include image-carrusel;
+							overflow: hidden;
+							&:after{
+								background-size: cover;
+							    width: 161px;
+							    height: 422px;
+							    @media screen and (max-width: $breakpoint_4){
+								    display: none;
+							    }
+							}
+							
+							@media screen and (max-width: $breakpoint_4){
+								margin-bottom: 3rem;
+							}
+							
+							img{
+								width: 100%;
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+.page-node-type-page{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			div[role="heading"]{
+				
+				position: relative;
+						    
+				&:before{
+					content: "";
+					position: absolute;
+				    left: -110%;
+					top: 90%;
+					//background: url(../images/svg/mancha-blanca.svg);
+					background: url(../images/svg/mancha-blanca.png);
+					background-repeat: no-repeat;
+					width: 3190px;
+					height: 291px;
+					z-index: -1;
+					background-size: cover;
+				}
+				
+				section{
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

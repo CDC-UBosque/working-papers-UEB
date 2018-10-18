@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------
+// ----------------------- mas informacion home ----------------------- //
+
+@mixin input-form{
+    box-shadow: none;
+    border: 0px;
+    padding: 2rem;
+    height: auto;
+    font-size: 16px;
+}
+
+.path-frontpage{
+	
+	.footer {
+		border-top: 0px;
+		padding-top: 0;
+		
+		&:before{
+			display: none;
+		}
+		
+		.region-footer{
+			
+			section{
+				
+				&:nth-child(1){
+					color: $color_brand_white;
+					margin-bottom: 40rem;
+					text-align: center;
+					
+					// star form section
+					form{
+						@include form-info;
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

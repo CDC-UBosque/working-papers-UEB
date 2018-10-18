@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------
+// ----------------------- carrusel ----------------------- //
+
+// container general
+.block-views-blockcarrusel-home-block-1 {
+	
+	margin-top: 8rem;
+	
+	// container
+	.jcarousel-wrapper.jcarousel-skin-default{
+		@include bg-carrusel;
+		
+		box-shadow: 0 0 80px rgba(0,0,0,0.6);
+		width: 100%;
+	    margin: 0;
+	    border: 0;
+	    max-width: initial;
+	    height: auto;
+	    border-radius: 0;
+	    position: relative;
+	    
+	    
+	    // arrows general
+	    > a{
+		    background: $color_ec_mag;
+			width: 41px;
+		    height: 78px;
+		    border-radius: 0;
+		    text-shadow: none;
+		    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+		    top: 40%;
+		    &:after{
+			    visibility: visible;
+			    font-size: 18px;
+				left: 45%;
+			    bottom: initial;
+			    top: 32%;
+			    background: none;
+		    }
+		    
+		    &:hover{
+			    &:after{
+				    width: initial;
+				    background: none;
+			    }
+		    }
+	    }
+	    
+	    // arrow left
+	    .jcarousel-control-prev{
+			left: -2rem;
+	    }
+	    
+	    // arrow right
+	    .jcarousel-control-next{
+			right: -2rem;
+	    }
+	    
+	    // content
+	    .jcarousel{
+		    
+		    ul{
+			    
+			    // each banner element
+			    li{
+				    //width: 100%;
+					height: 400px;
+					background: $color_brand_white;
+					width: 1140px;
+					
+					@media screen and (max-width: $breakpoint_1){
+						width: 940px;
+						height: 350px;
+					}
+					
+					@media screen and (max-width: $breakpoint_2){
+						width: 720px;
+						height: 270px;
+					}
+					
+					@media screen and (max-width: $breakpoint_4){
+						height: auto;
+					    display: flex;
+					    width: min-content;
+					    flex-direction: column;
+					    min-width: 340px;
+						border-left: 1px solid $color_ec_purple;
+					}
+					
+					// title
+					.views-field-title{
+						
+						@include title-carrusel;
+						
+					}
+					
+					// description
+					.views-field-field-bocadillo-del-banner{
+						@include description-carrusel;
+					}
+					
+					// view more
+					.views-field-view-node{
+						@include links-carrusel;
+					}
+					
+					// image
+					.views-field-field-imagen-del-curso-taller{
+						@include image-carrusel;
+					}
+					
+			    }
+			    
+		    }
+		    
+	    }
+	    
+	}
+	
+}

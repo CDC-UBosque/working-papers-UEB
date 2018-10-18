@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------
+// ----------------------- Footer internas ----------------------- //
+
+.page-node-type-page,
+.user-logged-in,
+.path-user,
+.page-node-type-cursos-y-talleres{
+	
+	.footer {
+	
+		padding-bottom: 0;
+	    
+	    .region-footer{
+			
+			section{
+				
+				// info edificio
+				&:nth-child(2){
+					@include info-edificio-footer;
+				}
+				
+				// info logos
+				&:nth-child(3){
+					@include info-logos-footer;
+				}
+				
+				// info vigilada
+				&:nth-child(4){
+					@include info-vigilada-footer;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

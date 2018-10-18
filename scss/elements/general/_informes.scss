@@ -1,0 +1,172 @@
+// -----------------------------------------------------------------------
+// ----------------------- informes bloque ----------------------- //
+
+.page-node-type-page{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			> aside[role="complementary"]{
+				
+				margin-top: 19rem;
+				
+				@media screen and (max-width: $breakpoint_3){
+					    background: $color_brand_white;
+						position: relative;
+						border-radius: 0;
+						border: 0px;
+					    padding: 5rem 0 16rem 2rem;
+					    margin-top: 0;
+						&::before,
+						&::after {
+						    content: "";
+						    background: $color_brand_white;
+						    display: block;
+						    //width: $bg-demasia-width;
+						    width: 100%;
+						    height: 100%;
+						    position: absolute;
+						    top: 0;
+						    left: 100%;
+						}
+						&::after {
+						    left: auto;
+						    right: 100%;
+						}
+				}
+				    
+				.well{
+					background: $color_brand_white;
+				    border: 0px;
+				    border-radius: 0px;
+				    box-shadow: none;
+				    border-left: 1px solid;
+				    padding-top: 0;
+				    
+				    section{
+					    
+					    .field--name-body{
+						    
+						    p{
+							    margin: 0;
+							    
+							    &:nth-child(1){
+								    font-family: $font-AG-black;
+								    margin: 0 0 10px;
+							    }
+							    
+							    &:nth-child(2){
+								    font-family: $font-AG-regular;
+								    font-size: $font-titles;
+							    }
+							    
+							    &:nth-child(3){
+								    font-family: $font-AG-black;
+							    }
+							    
+							    &:nth-child(5){
+								    font-size: $font-txt-l;
+								    line-height: $font-txt-xl;
+							    }
+							    
+						    }
+						    
+					    }
+					    
+				    }
+				    
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+.page-node-type-cursos-y-talleres{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			> aside[role="complementary"]{
+				
+				//margin-top: 19rem;
+				
+				@media screen and (max-width: $breakpoint_3){
+					    background: $color_brand_white;
+						position: relative;
+						border-radius: 0;
+						border: 0px;
+					    padding: 5rem 0 16rem 2rem;
+					    margin-top: 0;
+						&::before,
+						&::after {
+						    content: "";
+						    background: $color_brand_white;
+						    display: block;
+						    //width: $bg-demasia-width;
+						    width: 100%;
+						    height: 100%;
+						    position: absolute;
+						    top: 0;
+						    left: 100%;
+						}
+						&::after {
+						    left: auto;
+						    right: 100%;
+						}
+				}
+				    
+				.well{
+					background: $color_brand_white;
+				    border: 0px;
+				    border-radius: 0px;
+				    box-shadow: none;
+				    border-left: 1px solid;
+				    padding-top: 0;
+				    
+				    section{
+					    
+					    .field--name-body{
+						    
+						    p{
+							    margin: 0;
+							    
+							    &:nth-child(1){
+								    font-family: $font-AG-black;
+								    margin: 0 0 10px;
+							    }
+							    
+							    &:nth-child(2){
+								    font-family: $font-AG-regular;
+								    font-size: $font-titles;
+							    }
+							    
+							    &:nth-child(3){
+								    font-family: $font-AG-black;
+							    }
+							    
+							    &:nth-child(5){
+								    font-size: $font-txt-l;
+								    line-height: $font-txt-xl;
+							    }
+							    
+						    }
+						    
+					    }
+					    
+				    }
+				    
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

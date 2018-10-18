@@ -1,0 +1,21 @@
+@mixin links-hover{
+	&:after{
+		position: absolute;
+		content: "";
+		height: 2px;
+		width: 0%;
+		left: 0%;
+		background: $color_ec_mag;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover, &:focus{
+		text-decoration: none;
+		color: $color_ec_mag;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			bottom: 0%;
+		}
+	}
+}

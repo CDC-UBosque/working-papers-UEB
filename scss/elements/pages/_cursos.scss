@@ -1,0 +1,345 @@
+// -----------------------------------------------------------------------
+// ----------------------- Cursos ----------------------- //
+
+// container general
+.page-node-type-page,
+.page-node-type-cursos-y-talleres{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			div[role="heading"]{
+				
+				section{
+					
+					&:nth-child(2){
+						
+						background: $color_brand_white;
+					    position: relative;
+					    //width: 100%;
+					    margin-top: 10rem;
+					    border-radius: 0;
+					    border: 0px;
+						padding: 2rem 0 11rem;
+						display: grid;
+					    &::before,
+					    &::after {
+					        content: "";
+					        background: $color_brand_white;
+					        display: block;
+					        //width: $bg-demasia-width;
+					        width: 100%;
+					        height: 100%;
+					        position: absolute;
+					        top: 0;
+					        left: 100%;
+					    }
+					    &::after {
+					        left: auto;
+					        right: 100%;
+					    }
+					    
+					    .views-element-container{
+						    
+						    position: relative;
+						    
+						    &:before{
+								content: "";
+								position: absolute;
+							    left: -110rem;
+							    top: -22rem;
+								//background: url(../images/svg/mancha-blanca.svg);
+								background: url(../images/svg/mancha-blanca.png);
+								background-repeat: no-repeat;
+								width: 3190px;
+								height: 291px;
+								z-index: -1;
+								background-size: cover;
+							}
+					
+							&:after{
+								content: "";
+							    position: absolute;
+							    bottom: -5rem;
+							    left: 0;
+							    background: url(../images/svg/line-yellow.svg);
+							    background-repeat: no-repeat;
+							    background-size: cover;
+							    width: 100%;
+							    height: 8px;
+							    z-index: 1;
+							}
+							
+							// actual info
+							.views-row{
+								
+								display: flex;
+							    flex-flow: row wrap;
+							    flex-direction: row;
+								
+								// ------------------ ------------------ ------------------ ------------------ ------------------ ------------------ 
+								// Inicio estilos datos de fecha, horario, inversión, descuentos y en contacto
+								// ------------------------------------ ------------------ ------------------ ------------------ ------------------ 
+								
+								// ------------------ 
+								// Fecha de inicio
+								// ------------------
+								.views-field-field-fecha-de-inicio{
+									@include inline-block(top);
+									@include grid-porcentaje(4);
+									border-right: 1px solid $color_gray_10;
+									padding: 1rem;
+									position: relative;
+									order: 1;
+									flex-basis: 30%;
+									
+									@media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+										flex-basis: 100%;
+										border-bottom: 1px solid $color_gray_10;
+										border-right: 0px;
+									}
+									
+									.views-label{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+										color: $color_gray_50;
+									}
+									
+									.field-content{
+										font-size: $font-brandb-m;
+										line-height: $font-brandb-m;
+										font-family: $font-AG-black;
+									}
+									
+								}
+								
+								// ------------------ 
+								// Fecha de finalizacion
+								// ------------------
+								.views-field-field-fecha-de-finalizacion{
+									@include inline-block(top);
+									border-right: 1px solid $color_gray_10;
+									border-bottom: 1px solid $color_gray_10;
+									padding: 1rem;
+									position: relative;
+									order: 4;
+									flex-basis: 30%;
+									
+									@media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 3;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 2;
+									    border-right: 0px;
+									}
+									
+									.views-label{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+										color: $color_gray_50;
+									}
+									
+									.field-content{
+										font-size: $font-brandb-m;
+										line-height: $font-brandb-m;
+										font-family: $font-AG-black;
+									}
+									
+								}
+								
+								// ------------------ 
+								// Inversión
+								// ------------------
+								.views-field-field-inversion{
+									@include inline-block(top);
+									//@include grid-porcentaje(4);
+									border-right: 1px solid $color_gray_10;
+									padding: 1rem;
+									position: relative;
+									order: 6;
+									flex-basis: 30%;
+									
+									@media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 7;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 6;
+									    border-right: 0px;
+									}
+									
+									.views-label{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+										color: $color_gray_50;
+									}
+									
+									.field-content{
+										font-size: $font-brandb-l;
+										line-height: $font-brandb-l;
+										font-family: $font-AG-black;
+									}
+									
+								}
+								
+								// ------------------ 
+								// Horario
+								// ------------------
+								.views-field-field-horario{
+									@include inline-block(top);
+									@include grid-porcentaje(4);
+									border-right: 1px solid $color_gray_10;
+									border-bottom: 1px solid $color_gray_10;
+									padding: 1rem;
+									position: relative;
+								    order: 2;
+								    flex-basis: 40%;
+								    
+								    @media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 5;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 3;
+									    border-right: 0px;
+									}
+									
+									.views-label{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+										color: $color_gray_50;
+									}
+									
+									.field-content{
+										font-size: $font-brandb-m;
+										line-height: $font-brandb-m;
+										font-family: $font-AG-black;
+									}
+									
+								}
+								
+								// ------------------ 
+								// Descuentos especiales
+								// ------------------
+								.views-field-field-descuentos-especiales{
+									@include inline-block(top);
+									@include grid-porcentaje(4);
+									border-right: 1px solid $color_gray_10;
+									//float: left;
+									padding: 1rem;
+									position: relative;
+									order: 5;
+									flex-basis: 40%;
+									
+									@media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 6;
+										border-right: 0px;
+										border-top: 1px solid $color_gray_10;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 4;
+									    border-bottom: 1px solid $color_gray_10;
+									    border-right: 0px;
+									}
+									
+									.field__label{
+										font-size: $font-baser-s;
+										font-family: $font-baseb;
+									}
+									.field__item{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+									}
+								}
+								
+								// ------------------ 
+								// dirigido a
+								// ------------------
+								.views-field-field-dirigido-a{
+									@include inline-block(top);
+									padding: 1rem;
+									position: relative;
+								    order: 3;
+								    flex-basis: 30%;
+								    
+								    @media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 2;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 5;
+									    border-bottom: 1px solid $color_gray_10;
+									}
+									
+									.views-label{
+										font-size: $font-baser-s;
+										font-family: $font-basel;
+										color: $color_gray_50;
+									}
+									
+									.field-content{
+										font-size: $font-brandb-l;
+										line-height: $font-brandb-l;
+										font-family: $font-AG-black;
+									}
+									
+								}
+								
+								// ------------------ 
+								// boton inscripciones
+								// ------------------
+								.views-field-field-inscripciones{
+									@include inline-block(top);
+									padding: 1rem;
+									position: relative;
+								    order: 5;
+								    flex-basis: 30%;
+								    
+								    @media screen and (max-width: $breakpoint_3){
+										flex-basis: 50%;
+										order: 4;
+									}
+									
+									@media screen and (max-width: $breakpoint_4){
+									    flex-basis: 100%;
+									    order: 7;
+									}
+									
+									a{
+										@include selector-white-line;
+									}
+									
+								}
+								
+							}
+						    
+					    }
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,41 @@
+// ------------------------------------ Global elements ------------------------------------ 
+//@import 'bootstrap';
+@import 'fonts';
+
+// ------------------------------------ Mixins escuela creativa ------------------------------------ 
+@import 'elements/mixins/_mixins';
+@import 'elements/mixins/_buttons';
+
+@import 'config';
+@import 'artifacts';
+@import 'layout';
+@import 'animate';
+@import 'base';
+
+
+
+
+// ------------------------------------ Custom styles ------------------------------------ 
+@import 'elements/general/_header';
+@import 'elements/general/_footer-interns';
+@import 'elements/general/_footer';
+@import 'elements/general/_mas-informacion';
+@import 'elements/general/_mas-informacion-interns';
+@import 'elements/general/_informes';
+
+
+// ------------------------------------ Pages styles home ------------------------------------ 
+@import 'elements/home/_carrusel';
+@import 'elements/home/_proximos-cursos';
+@import 'elements/home/_experiencias';
+@import 'elements/home/_experiencia-personalizada';
+@import 'elements/home/_nuestra-metodologia';
+@import 'elements/home/_reunete';
+@import 'elements/home/_remove-drupal-block';
+
+// ------------------------------------ Pages ------------------------------------ 
+@import 'elements/pages/_banner';
+@import 'elements/pages/_repo-classes';
+@import 'elements/pages/_log';
+@import 'elements/pages/_cursos';
+@import 'elements/pages/_cursos-desc';

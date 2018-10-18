@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------
+// ----------------------- Footer home ----------------------- //
+
+//.user-logged-in.path-frontpage,
+.path-frontpage{
+	
+	.footer {
+	
+		padding-bottom: 0;
+	    
+	    .region-footer{
+			
+			section{
+				
+				// info edificio
+				&:nth-child(3){
+					@include info-edificio-footer;
+				}
+				
+				// info logos
+				&:nth-child(4){
+					@include info-logos-footer;
+				}
+				
+				// info vigilada
+				&:nth-child(5){
+					@include info-vigilada-footer;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

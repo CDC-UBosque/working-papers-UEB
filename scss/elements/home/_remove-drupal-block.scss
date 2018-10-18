@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------
+// ----------------------- remove drupal contextual block, home ----------------------- //
+
+// container general
+.footer.container{
+	
+	.region-footer{
+		
+		.views-element-container{
+			
+			display: none;
+			
+		}
+		
+	}
+	
+}

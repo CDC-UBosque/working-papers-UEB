@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------
+// ----------------------- Repositorio cursos ----------------------- //
+
+// container general
+.page-node-type-page{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			> section{
+				
+				background: $color_brand_white;
+			    position: relative;
+			    margin-top: 13rem;
+			    border-radius: 0;
+			    border: 0px;
+				padding: 4rem 0 16rem;
+			    &::before,
+			    &::after {
+			        content: "";
+			        background: $color_brand_white;
+			        display: block;
+			        //width: $bg-demasia-width;
+			        width: 100%;
+			        height: 100%;
+			        position: absolute;
+			        top: 0;
+			        left: 100%;
+			    }
+			    &::after {
+			        left: auto;
+			        right: 100%;
+			    }
+			    
+			    @media screen and (max-width: $breakpoint_2){
+				    padding: 4rem 2rem 16rem;
+			    }
+			    
+			    // container search actions
+			    .block-views-blockbuscador-cursos-block-1{
+				    
+				    .view-buscador-cursos{
+					    
+					    // header
+					    .view-header{
+						    @include grid-porcentaje(8);
+						    
+						    @media screen and (max-width: $breakpoint_3){
+							    @include grid-porcentaje(12);
+						    }
+						    
+					    }
+					    
+					    // filters
+					    .view-filters{
+						    margin: 3rem 0;
+						    
+						    form{
+							    
+							    .form--inline{
+								    
+								    // selectors
+								    .form-item{
+									    margin-right: 2rem;
+									    
+									     // title label
+									    label{
+											padding-top: 1rem;
+										    font: {
+										        family: $font-AG-bold;
+										        size: $font-txt-xl;
+										    }
+									    }
+									    
+									    // button selector
+										.select-wrapper{
+											margin: 0 1rem;
+										    
+										    select{
+											    @include selector-white-line;
+										    }
+										    
+										}
+									    
+								    }
+								    
+								    // button
+								    .form-actions{
+									    
+									    button{
+										    @include buton-s;
+									    }
+									    
+								    }
+								    
+							    }
+							    
+						    }
+						    
+					    }
+					    
+					    // content classes
+					    .view-content{
+						    position: relative;
+						    z-index: 10;
+						    
+						    @media screen and (max-width: $breakpoint_4){
+								text-align: center;
+							}
+							
+							.views-row{
+								@include repo-classes;
+								
+								// image
+								.views-field-field-imagen-del-curso-taller{
+									
+								}
+								
+								// title
+								.views-field-title{
+									@include repo-classes-txt;
+								}
+								
+								// more link
+								.views-field-view-node{
+									@include repo-classes-link;
+								}
+								
+							}
+							
+						}
+					    
+				    }
+				    
+			    }
+				
+			}
+			
+		}
+		
+	}
+	
+}

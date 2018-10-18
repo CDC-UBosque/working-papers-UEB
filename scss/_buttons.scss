@@ -1,0 +1,129 @@
+@mixin buton-m {
+    display: inline-block;
+    vertical-align: top;
+    color: $color_brand_white;
+    background-color: $color_ec_mag;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    font: {
+        family: $font-AG-bold;
+        size: $font-txt-xl;
+    }
+    &:hover {
+        border: 1px solid $color_ec_mag;
+        background: none;
+        color: $color_ec_mag;
+        &:after{
+	        display: none;
+        }
+    }
+}
+
+@mixin buton-s {
+    display: inline-block;
+    vertical-align: top;
+    color: $color_brand_white;
+    background-color: $color_ec_mag;
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    font: {
+        family: $font-AG-bold;
+        size: $font-txt-l;
+    }
+    &:hover {
+        border: 1px solid $color_ec_mag;
+        background: none;
+        color: $color_ec_mag;
+        &:after{
+	        display: none;
+        }
+    }
+}
+
+@mixin buton-s-yellow {
+    display: inline-block;
+    vertical-align: top;
+    color: $color_brand_white;
+    background-color: $color_ec_yellow;
+    border-radius: 40px;
+    padding: 0.2rem 2rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    font: {
+        family: $font-AG-bold;
+        size: $font-txt-l;
+    }
+    &:hover {
+        border: 1px solid $color_ec_yellow;
+        background: none;
+        color: $color_ec_yellow;
+        &:after{
+	        display: none;
+        }
+    }
+}
+
+@mixin buton-s-white {
+    display: inline-block;
+    vertical-align: top;
+    color: $color-font;
+    background-color: $color_brand_white;
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+    border: 2px solid $color_ec_yellow;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    font: {
+        family: $font-AG-bold;
+        size: $font-txt-l;
+    }
+    &:hover {
+        background-color: $color_ec_yellow;
+        border: 2px solid $color_ec_yellow;
+        color: $color_brand_white;
+        &:after{
+	        display: none;
+        }
+    }
+}
+
+@mixin buton-s-white-line {
+    display: inline-block;
+    vertical-align: top;
+    color: $color_brand_white;
+    background: none;
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+    border: 2px solid $color_ec_yellow;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    font: {
+        family: $font-AG-bold;
+        size: $font-txt-l;
+    }
+    &:hover {
+        background: $color_ec_yellow;
+        border: 2px solid $color_ec_yellow;
+        color: $color_brand_white;
+        &:after{
+	        display: none;
+        }
+    }
+}

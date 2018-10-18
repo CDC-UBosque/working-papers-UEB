@@ -1,0 +1,160 @@
+// -----------------------------------------------------------------------
+// ----------------------- experiencias personalizadas ----------------------- //
+
+// container general
+.path-frontpage{
+	
+	.main-container{
+		
+		.row{
+			
+			> section{
+			    
+			    .region-content{
+				    
+				    section{
+					    
+					    &:nth-child(2){
+						    
+						    background: $color_brand_white;
+						    position: relative;
+						    border-radius: 0;
+						    border: 0px;
+							padding: 5rem 0 5rem;
+							display: inline-block;
+							margin-top: -1rem;
+						    &::before,
+						    &::after {
+						        content: "";
+						        background: $color_brand_white;
+						        display: block;
+						        //width: $bg-demasia-width;
+						        width: 100%;
+						        height: 100%;
+						        position: absolute;
+						        top: 0;
+						        left: 100%;
+						    }
+						    &::after {
+						        left: auto;
+						        right: 100%;
+						    }
+						    
+						    // image
+						    .field--name-field-imagen-del-bloque {
+							    @include inline-block(top);
+								@include grid-porcentaje(6);
+								width: 46%;
+							    float: right;
+								//box-shadow: 0 0 20px rgba(0,0,0,0.6);
+								padding: 0;
+								position: relative;
+								margin-bottom: 2rem;
+								
+								@media screen and (max-width: $breakpoint_3){
+									@include grid-porcentaje(10);
+									float: none;
+									padding: 0;
+									margin-left: 2rem;
+								}
+								
+								&::before,
+							    &::after {
+							        content: "";
+							        background: $color_ec_mag;
+							        display: block;
+							        //width: $bg-demasia-width;
+							        width: 10%;
+							        height: 80%;
+							        position: absolute;
+							        top: 10%;
+							        left: -3%;
+							    }
+							    &::after {
+							        left: auto;
+							        right: -3%;
+							    }
+							    
+							    img{
+								    z-index: 1;
+								    position: relative;
+							    }
+						    }
+						    
+						    // title
+						    .field--name-field-titulo-del-bloque{
+							    @include inline-block(top);
+								@include grid-porcentaje(6);
+								float: left;
+								padding-right: 4rem;
+								font-family: $font-AG-black;
+								font-size: $font-titles-xl;
+								line-height: $font-titles-xl;
+								word-break: break-word;
+								
+								@media screen and (max-width: $breakpoint_3){
+									@include grid-porcentaje(10);
+									float: none;
+									margin-bottom: 2rem;
+								}
+								
+								@media screen and (max-width: $breakpoint_4){
+									@include grid-porcentaje(12);
+								}
+								
+						    }
+						    
+						    // description
+						    .field--name-field-texto-del-bloque{
+							    @include inline-block(top);
+								@include grid-porcentaje(6);
+								//float: left;
+								padding-right: 4rem;
+								margin: 2rem 0;
+								@include paragraph;
+								
+								@media screen and (max-width: $breakpoint_3){
+									@include grid-porcentaje(10);
+									float: none;
+								}
+								
+								@media screen and (max-width: $breakpoint_4){
+									@include grid-porcentaje(12);
+								}
+								
+						    }
+						    
+						    // link
+						    .field--name-field-enlace-del-bloque{
+							    @include inline-block(top);
+								@include grid-porcentaje(6);
+								float: left;
+								padding-right: 4rem;
+								
+								@media screen and (max-width: $breakpoint_3){
+									@include grid-porcentaje(10);
+									float: none;
+								}
+								
+								@media screen and (max-width: $breakpoint_4){
+									@include grid-porcentaje(12);
+								}
+								
+								a{
+									@include buton-s;
+								}
+						    }
+						    
+					    }
+					    
+				    }
+				    
+			    }
+    
+			}
+			
+		}
+		
+	}
+
+}

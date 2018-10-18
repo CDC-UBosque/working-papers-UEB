@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------
+// ----------------------- banner ----------------------- //
+
+// container general
+//.user-logged-in,
+.path-user{
+	
+	div[role="main"]{
+	
+		.row{
+			
+			background: $color_brand_white;
+			position: relative;
+			margin-top: 6rem;
+			border-radius: 0;
+			border: 0px;
+			padding: 4rem 0 16rem;
+			display: grid;
+			&::before,
+			&::after {
+			    content: "";
+			    background: $color_brand_white;
+			    display: block;
+			    //width: $bg-demasia-width;
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 100%;
+			}
+			&::after {
+			    left: auto;
+			    right: 100%;
+			}
+			
+			> section{
+				position: relative;
+				z-index: 10;
+				
+				.label{
+				    color: inherit;
+				    font-size: initial;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
