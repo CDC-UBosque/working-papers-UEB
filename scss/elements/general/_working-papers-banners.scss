@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------
+// ----------------------- working papers banner ----------------------- //
+
+// container general
+div[role="main"]{
+	
+	//padding: 3rem;
+	
+	.row{
+		//max-width: 980px;
+		//margin: auto;
+		
+		.highlighted{
+			background: url(../images/assets/noise.png) $color_orange_light;
+			color: $color_brand_white;
+			padding: 2rem 0 13rem;
+			
+			.nombre-sitio{
+				max-width: 980px;
+				margin: auto;
+				text-align: center;
+				
+				div{
+					font: $font-titles-xl $font-AG-light;
+					display: inline-block;
+					letter-spacing: 5.5px;
+					text-transform: uppercase;
+					line-height: $font-titles-xl;
+					
+					&:last-child{
+						font-family: $font-AG-black;
+						
+						@media only screen and (max-width: $breakpoint_4){
+							
+						}
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

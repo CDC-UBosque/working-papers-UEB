@@ -1,35 +1,145 @@
 // -----------------------------------------------------------------------
-// ----------------------- Footer home ----------------------- //
+// ----------------------- Footer  ----------------------- //
 
-//.user-logged-in.path-frontpage,
-.path-frontpage{
+.footer{
 	
-	.footer {
+	background: $color_brand;
+	margin: 0 auto;
+	position: relative;
+	margin-top: -3rem;
+	padding: 1rem 3rem 0;
+	&::before,
+	&::after {
+	    content: "";
+	    background: $color_brand;
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 100%;
+	}
+	&::after {
+	    left: auto;
+	    right: 100%;
+	}
 	
-		padding-bottom: 0;
-	    
-	    .region-footer{
+	.region-footer{
+		
+		section{
 			
-			section{
+			p{
+				font: $font-txt-m $font-AG-regular;
+			}
+			
+			a{
+				@include links-white;
+			}
+			
+			strong, b{
+				font-family: $font-AG-black;
+			}
+		
+			// Ubosque
+			&:nth-child(1){
+				@include inline-block(top);
+				@include grid-porcentaje(12);
+				margin-bottom: 1rem;
+				a{
+					color: $color_gray_80;
+					font: $font-txt-m $font-AG-black;
+				}
+			}
+			
+			&:nth-child(2){
+				@include inline-block(top);
+				@include grid-porcentaje(4);
+				float: left;
 				
-				// info edificio
-				&:nth-child(3){
-					@include info-edificio-footer;
+				@media only screen and (max-width: $breakpoint_3){
+					@include inline-block(top);
+					@include grid-porcentaje(6);
 				}
 				
-				// info logos
-				&:nth-child(4){
-					@include info-logos-footer;
+				@media only screen and (max-width: $breakpoint_4){
+					@include inline-block(top);
+					@include grid-porcentaje(12);
+				}
+			}
+			
+			&:nth-child(3){
+				@include inline-block(top);
+				@include grid-porcentaje(4);
+				float: left;
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include inline-block(top);
+					@include grid-porcentaje(6);
 				}
 				
-				// info vigilada
-				&:nth-child(5){
-					@include info-vigilada-footer;
+				@media only screen and (max-width: $breakpoint_4){
+					@include inline-block(top);
+					@include grid-porcentaje(12);
+					margin-top: 1rem;
+				}
+			}
+			
+			&:nth-child(4){
+				@include inline-block(top);
+				@include grid-porcentaje(4);
+				float: left;
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include inline-block(top);
+					@include grid-porcentaje(12);
+					margin-top: 1rem;
+				}
+				
+				@media only screen and (max-width: $breakpoint_4){
+					@include inline-block(top);
+					@include grid-porcentaje(12);
+				}
+			}
+			
+			&:nth-child(5){
+				clear: both;
+				background: $color_brand_white;
+				position: relative;
+				padding: 2rem;
+			    margin-top: 3rem;
+			    display: inline-block;
+			    width: 100%;
+			    
+			    @media only screen and (max-width: $breakpoint_4){
+				    padding: 2rem 0;
+			    }
+			    
+				&::before,
+				&::after {
+				    content: "";
+				    background: $color_brand_white;
+				    display: block;
+				    width: 100%;
+				    height: 100%;
+				    position: absolute;
+				    top: 0;
+				    left: 100%;
+					z-index: 9;
+				}
+				&::after {
+				    left: auto;
+				    right: 100%;
+				}
+				
+				p{
+					text-align: center;
+					font: $font-baser-xs $font-baser;
+					letter-spacing: 2px;
 				}
 				
 			}
 			
-		}
+		}		
 		
 	}
 	

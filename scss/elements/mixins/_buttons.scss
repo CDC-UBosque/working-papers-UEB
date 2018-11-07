@@ -2,7 +2,7 @@
     display: inline-block;
     vertical-align: top;
     color: $color_brand_white;
-    background-color: $color_ec_mag;
+    background-color: $color_brand;
     border-radius: 40px;
     padding: 1rem 2rem;
     border: 1px solid transparent;
@@ -15,9 +15,9 @@
         size: $font-txt-xl;
     }
     &:hover {
-        border: 1px solid $color_ec_mag;
+        border: 1px solid $color_brand;
         background: none;
-        color: $color_ec_mag;
+        color: $color_brand;
         &:after{
 	        display: none;
         }
@@ -28,7 +28,7 @@
     display: inline-block;
     vertical-align: top;
     color: $color_brand_white;
-    background-color: $color_ec_mag;
+    background-color: $color_brand;
     border-radius: 40px;
     padding: 0.5rem 2rem;
     border: 1px solid transparent;
@@ -41,20 +41,20 @@
         size: $font-txt-l;
     }
     &:hover {
-        border: 1px solid $color_ec_mag;
+        border: 1px solid $color_brand;
         background: none;
-        color: $color_ec_mag;
+        color: $color_brand;
         &:after{
 	        display: none;
         }
     }
 }
 
-@mixin buton-s-yellow {
+@mixin buton-s-green {
     display: inline-block;
     vertical-align: top;
     color: $color_brand_white;
-    background-color: $color_ec_yellow;
+    background-color: $color_brand;
     border-radius: 40px;
     padding: 0.2rem 2rem;
     border: 1px solid transparent;
@@ -67,9 +67,9 @@
         size: $font-txt-l;
     }
     &:hover {
-        border: 1px solid $color_ec_yellow;
+        border: 1px solid $color_brand;
         background: none;
-        color: $color_ec_yellow;
+        color: $color_brand;
         &:after{
 	        display: none;
         }
@@ -83,7 +83,7 @@
     background-color: $color_brand_white;
     border-radius: 40px;
     padding: 0.5rem 2rem;
-    border: 2px solid $color_ec_yellow;
+	    border: 2px solid $color_brand;
     text-decoration: none;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -93,8 +93,8 @@
         size: $font-txt-l;
     }
     &:hover {
-        background-color: $color_ec_yellow;
-        border: 2px solid $color_ec_yellow;
+        background-color: $color_brand;
+        border: 2px solid $color_brand;
         color: $color_brand_white;
         &:after{
 	        display: none;
@@ -109,7 +109,7 @@
     background: none;
     border-radius: 40px;
     padding: 0.5rem 2rem;
-    border: 2px solid $color_ec_yellow;
+    border: 2px solid $color_brand;
     text-decoration: none;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -119,8 +119,35 @@
         size: $font-txt-l;
     }
     &:hover {
-        background: $color_ec_yellow;
-        border: 2px solid $color_ec_yellow;
+        background: $color_brand;
+        border: 2px solid $color_brand;
+        color: $color_brand_white;
+        &:after{
+	        display: none;
+        }
+    }
+}
+
+@mixin buton-s-green-line {
+    display: inline-block;
+    vertical-align: top;
+    color: $color_brand;
+    background: none;
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+    border: 1px solid $color_brand;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: .3s ease-out all;
+    text-transform: uppercase;
+    font: {
+        family: $font-baseblack;
+        size: 10px;
+    }
+    &:hover {
+        background: $color_brand;
+        border: 1px solid $color_brand;
         color: $color_brand_white;
         &:after{
 	        display: none;
@@ -135,7 +162,7 @@
     background: $color_brand_white;
     border-radius: 40px;
     padding: 0.5rem 2rem;
-    border: 2px solid $color_ec_yellow;
+    border: 2px solid $color_brand;
     text-decoration: none;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -145,8 +172,8 @@
         size: $font-txt-l;
     }
     &:hover {
-        background: $color_ec_yellow;
-        border: 2px solid $color_ec_yellow;
+        background: $color_brand;
+        border: 2px solid $color_brand;
         color: $color_brand_white;
         &:after{
 	        display: none;

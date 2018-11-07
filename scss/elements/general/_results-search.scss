@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------
+// ----------------------- working papers results search ----------------------- //
+
+//@include resultados;
+
+// container general
+div[role="main"]{
+	
+	.row{
+	
+		.region-content{
+			
+			.block-views-blockbuscador-block-3{
+					
+				// formularios group
+				.form-group{
+					
+				}
+				
+				// content results
+				.class-resultados{
+					background: $color_brand_white;
+					margin: 0 -1rem 0 -3rem;
+					color: $color_gray_80;
+					
+					@media only screen and (max-width: $breakpoint_2){
+						margin: 0 1rem 0 -1rem;
+					}
+					
+					@media only screen and (max-width: $breakpoint_3){
+						margin: 0 1rem 0;
+					}
+					
+				}
+				
+				@include resultados;
+				
+				// navigation
+				nav{
+					
+					background: $color_brand_white;
+					margin: 0 -1rem 0 -3rem;
+					text-align: center;
+					
+					@media only screen and (max-width: $breakpoint_2){
+						margin: 0 1rem 0 -1rem;
+					}
+					
+					@media only screen and (max-width: $breakpoint_3){
+						margin: 0 1rem 0;
+					}
+					
+					.pager{
+						margin: 0;
+						display: inline-block;
+						margin: 1rem auto;
+						
+						a{
+							@include buton-s-green;
+							&:after{
+								display: none;
+							}
+						}
+						
+					}
+					
+				}
+				
+				// footer
+				.view-footer{
+					
+					hr{
+						margin: 1rem 0rem 1rem;
+						
+						@media only screen and (max-width: $breakpoint_2){
+							margin: 1rem 2rem 1rem 0;
+						}
+						
+						@media only screen and (max-width: $breakpoint_3){
+							margin: 1rem 2rem 1rem;
+						}
+					
+					}
+					
+				}
+												
+			}
+			
+		}
+		
+	}
+	
+}

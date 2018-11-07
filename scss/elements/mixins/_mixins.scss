@@ -1,75 +1,62 @@
 // -----------------------------------------------------------------------
 // ----------------------- vistas cursos  ----------------------- //
-@mixin repo-classes {
+@mixin left-content-space{
+	padding-left: 5rem;
+	@media only screen and (max-width: $breakpoint_2){
+		padding-left: 3.5rem;
+	}
+}
+
+@mixin left-content-result{
 	@include inline-block(top);
-	@include grid-porcentaje(3);
-	width: 21%;
-	background: $color_brand_white;
+	@include grid-porcentaje(7);
+	padding-left: 0;
+	float: left;
+	@media only screen and (max-width: $breakpoint_2){
+		@include inline-block(top);
+		@include grid-porcentaje(6);
+		padding-left: 0;
+	}
+	
+	@media only screen and (max-width: 630px){
+		@include inline-block(top);
+		@include grid-porcentaje(12);
+		padding-left: 0;
+	}
+}
+
+@mixin right-content-result{
+	@include inline-block(top);
+	@include grid-porcentaje(4);
+	float: right;
 	position: relative;
-	border-radius: 0;
-	border: 0px;
-	padding: 0;
-    margin: 1rem 2rem 5rem;
-    box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
-	text-align: center;
-	&::before,
+	
+	@media only screen and (max-width: $breakpoint_2){
+		@include inline-block(top);
+		@include grid-porcentaje(4);
+	}
+	
+	@media only screen and (max-width: 630px){
+		@include inline-block(top);
+		@include grid-porcentaje(12);
+		@include left-content-space;
+	}
+	
 	&::after {
 	    content: "";
-	    background: $color_ec_mag;
+	    //background: url(../images/assets/noise.png) $color_orange_light;
+	    border-left: 1px solid $color_gray_15;
 	    display: block;
-	    width: 3%;
-	    height: 80%;
+	    width: 100%;
+		height: 100%;
 	    position: absolute;
-	    top: 10%;
-	    left: -3%;
+	    top: 0;
+	    left: -5%;
+	    
+	    @media only screen and (max-width: $breakpoint_4){
+		    display: none;
+	    }
 	}
-	&::after {
-	    left: auto;
-	    right: -3%;
-	}
-	
-	@media screen and (max-width: $breakpoint_1){
-		width: 25%;
-	}
-	
-	@media screen and (max-width: $breakpoint_3){
-		width: 40%;
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		width: 75%;
-	}
-	
-}
-
-@mixin repo-classes-txt{
-	margin: 1rem 0 3rem;
-					
-	a{
-		color: $color_ec_purple;
-		font-family: $font-baser;
-		font-size: $font-txt-xl;
-		margin: 1rem 0;
-		&:after{
-			display: none;
-		}
-	}
-	
-}
-
-@mixin repo-classes-link{
-	position: absolute;
-	width: 100%;
-	bottom: -2rem;
-	
-	.field-content{
-		
-		a{
-			@include buton-s-white;
-		}
-		
-	}	
-	
 }
 
 // -----------------------------------------------------------------------
@@ -82,13 +69,35 @@
 		height: 2px;
 		width: 0%;
 		left: 0%;
-		background: $color_ec_mag;
+		background: $color_brand;
 		bottom: 0%;
 		visibility: hidden;
 	}
 	&:hover, &:focus{
 		text-decoration: none;
-		color: $color_ec_mag;
+		color: $color_brand;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			bottom: 0%;
+		}
+	}
+}
+
+@mixin links-hover-white{
+	&:after{
+		position: absolute;
+		content: "";
+		height: 2px;
+		width: 0%;
+		left: 0%;
+		background: $color_brand_white;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover, &:focus{
+		text-decoration: none;
+		color: $color_brand_white;
 		&:after{
 			visibility: visible;
 			width: 100%;
@@ -98,7 +107,7 @@
 }
 
 @mixin links{
-	color: $color_ec_mag;
+	color: $color_brand;
 	font-family: $font-AG-regular;
 	position: relative;
 	word-break: break-word;
@@ -106,6 +115,17 @@
 		text-decoration: none;
 	}
 	@include links-hover;
+}
+
+@mixin links-white{
+	color: $color_brand_white;
+	font-family: $font-AG-regular;
+	position: relative;
+	word-break: break-word;
+	&:hover{
+		text-decoration: none;
+	}
+	@include links-hover-white;
 }
 
 @mixin links-menu{
@@ -129,7 +149,7 @@
 	}
 	&:hover, &:focus{
 		text-decoration: none;
-		//color: $color_ec_mag;
+		//color: $color_brand;
 		&:after{
 			visibility: visible;
 			width: 100%;
@@ -139,623 +159,180 @@
 	
 }
 
-// -----------------------------------------------------------------------
-// ----------------------- carrusel - banners  ----------------------- //
 
-@mixin bg-carrusel{
+
+// -----------------------------------------------------------------------
+// ----------------------- resultados content  ----------------------- //
+@mixin resultados{
+	.views-row{
+						
+	padding: 4rem;
+	border-bottom: 1px solid $color_gray_50;
 	display: inline-block;
-	padding: 0;
-	background: $color_brand_white;
-	margin-top: 9rem;
-	box-shadow: 0 0 80px rgba(0,0,0,0.6);
-	border: 0;
-	border-radius: 0;
-	position: relative;
-	width: 100%;
 	
-	&:before{
-	    content: "";
-		position: absolute;
-	    left: -7%;
-	    top: 16%;
-		background: url(../images/svg/mancha-verde-1.svg);
-		background-repeat: no-repeat;
-	    width: 156px;
-	    height: 315px;
-		z-index: -1;
-		@media screen and (max-width: $breakpoint_2){
-			top:-14%;
+	@media only screen and (max-width: $breakpoint_2){
+		padding: 2rem;
+	}
+	
+	// # volumen
+	.views-field-field-volumen{
+		text-transform: uppercase;
+		font-family: $font-baseb;
+		letter-spacing: 1.8px;
+		font-size: 9px;
+		//max-width: 5rem;
+		//float: left;
+	}
+	
+	// # Nº
+	.views-field-field-numero{
+		
+		max-width: 5rem;
+		float: left;
+		
+		.views-label{
+			text-transform: uppercase;
+			font-family: $font-baseb;
+			letter-spacing: 1.8px;
+			font-size: 9px;
 		}
-		@media screen and (max-width: $breakpoint_4){
-			top: -24%;
+		
+		.field-content{
+			text-transform: uppercase;
+			font-family: $font-brandb;
+			border-bottom: 5px solid $color_brand;
+			font-size: $font-brandb-l;
+		}
+		
+	}
+	
+	// issn
+	.views-field-field-isbn-issn{
+		@include left-content-space;
+		font: $font-txt-l $font-AG-regular;
+		margin-top: -1.8rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	// fecha texto
+	.views-field-field-fecha-texto{
+		//@include left-content-space;
+		margin-left: 2.9rem;
+		font: $font-baser-xs $font-baseb;
+		color: $color_gray_50;
+		border-right: 1px solid;
+	    display: table;
+	    padding-right: 1rem;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
+		float: left;
+		
+		@media only screen and (max-width: $breakpoint_2){
+			margin-left: 1.5rem;
 		}
 	}
 	
-	&:after{
-	    content: "";
-		position: absolute;
-		background: url(../images/svg/mancha-verde-2.svg);
-		background-repeat: no-repeat;
-	    width: 156px;
-	    height: 315px;
-	    right: -10%;
-	    top: 16%;
-	    z-index: -1;
-	    @media screen and (max-width: $breakpoint_2){
-			top:-14%;
-		}
-		@media screen and (max-width: $breakpoint_4){
-			top: 58%;
-		}
-	}
-}
-
-@mixin title-carrusel{
-	@include grid-porcentaje(4);
-	float: left;
-	margin-top: 5rem;
-	margin-left: 5rem;
-	font-family: $font-AG-black;
-	color: $color-font;
-	font-size: $font_banner;
-	line-height: $font_banner;
-	letter-spacing: -1px;
-	
-	a{
-		font-family: $font-AG-black;
-		color: $color-font;
-		font-size: $font_banner;
-		line-height: $font_banner;
-		letter-spacing: -1px;
-		&:after{
-	        display: none;
-	    }
+	// año numero
+	.views-field-field-ano-numero{
+		//@include left-content-space;
+		font: $font-baser-xs $font-baseb;
+		color: $color_gray_50;
+		//border-right: 1px solid;
+	    display: table;
+	    padding-left: 1rem;
+	    letter-spacing: 2px;
+	    text-transform: uppercase;
 	}
 	
-	@media screen and (max-width: $breakpoint_1){
-		margin-top: 2rem;
-	    margin-left: 2rem;
-		font-size: 3.4em;
-		line-height: 1em;
+	// title
+	.views-field-title{
+		@include left-content-space;
+		font: $font-titles $font-AG-black;
+		line-height: $font-bl-l;
+		margin-bottom: 1.5rem;
+		max-width: 760px;
+	}
+	
+	// grupos de investigacion
+	.views-field-field-grupo-de-investigacion{
+		@include left-content-result;
+		@include left-content-space;
+		
+		.views-label-field-grupo-de-investigacion{
+			font: $font-txt-l $font-baseb;
+			display: inline-block;
+			margin-right: 0.5rem;
+		}
+		
+		.field-content{
+			font: $font-txt-l $font-baser;
+			display: inline-block;
+		}
+		
+	}
+	
+	// bocadillo
+	.views-field-field-bocadillo{
+		@include left-content-result;
+		@include left-content-space;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	// btn descargar
+	.views-field-field-descargar{
+		@include left-content-result;
+		@include left-content-space;
+		
+		@media only screen and (max-width: $breakpoint_2){
+			float:none;
+			@include grid-porcentaje(12);
+			padding-left: 3.5rem;
+		}
+		
 		a{
-			font-size: 1em;
-			line-height: 1em;
-		}
-	}
-	
-	@media screen and (max-width: $breakpoint_2){
-		margin-top: 2rem;
-	    margin-left: 2rem;
-		font-size: 2.5em;
-		a{
-			font-size: 1em;
-			line-height: 1em;
-		}
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		float: none;
-		order: 1;
-		width: initial;
-		margin-right: 2rem;
-	}
-	
-}
-
-@mixin description-carrusel{
-	@include grid-porcentaje(4);
-	float: left;
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-	margin-left: 5rem;
-	font-size: $font_banner_sub;
-	
-	@media screen and (max-width: $breakpoint_1){
-	    margin-left: 2rem;
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		float: none;
-		order: 2;
-		width: initial;
-	}
-	
-}
-
-@mixin links-carrusel{
-	@include grid-porcentaje(4);
-	float: left;
-	margin-left: 5rem;
-	margin-top: 1rem;
-	
-	a{
-		@include buton-m;
-	}
-	
-	@media screen and (max-width: $breakpoint_1){
-	    margin-left: 2rem;
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		float: none;
-		order: 3;
-		width: initial;
-	}
-	
-}
-
-@mixin image-carrusel{
-	@include grid-porcentaje(7);
-	float: right;
-	position: relative;
-	padding: 0;
-	&:after{
-		content: "";
-		position: absolute;
-		left: 0;
-		top:0;
-		background: url(../images/svg/rotabanner-1.svg);
-		background-repeat: no-repeat;
-		width: 153px;
-	    height: 400px;
-	}
-	
-	@media screen and (max-width: $breakpoint_1){
-		width: 62%;
-	}
-	
-	@media screen and (max-width: $breakpoint_3){
-		width: 62%;
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		float: none;
-		margin: 3rem 3rem 0;
-		order: 4;
-		width: initial;
-		&:after{
-			display: none;
-		}
-	}
-	
-}
-
-// -----------------------------------------------------------------------
-// ----------------------- Footer  ----------------------- //
-@mixin info-edificio-footer{
-	
-	background: $color_brand_white;
-    position: relative;
-    border-radius: 0;
-    border: 0px;
-	padding: 0;
-    &::before,
-    &::after {
-        content: "";
-        background: $color_brand_white;
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        @media screen and (max-width: $breakpoint_3){
-	        width: 150%;
-        }
-    }
-    &::after {
-        left: auto;
-        right: 100%;
-    }
-    
-    @include inline-block(top);
-	@include grid-porcentaje(6);
-	float: left;
-	padding: 3rem 10px;
-	
-	@media screen and (max-width: $breakpoint_4){
-		@include grid-porcentaje(12);
-		padding: 3rem 10px;
-	}
-	
-	> div{
-		
-		&:nth-child(1){
-			
-			position: relative;
-			
-			&:before{
-				//background: url(../images/svg/ilustracion-3.svg);
-				background: url(../images/svg/ilustracion-3.png);
-				image-rendering: pixelated;
-				position: absolute;
-			    width: 2477px;
-			    height: 624px;
-			    top: -46rem;
-			    content: "";
-			    left: -115rem;
-			    z-index: 1;
-			    background-size: cover;
-			    
-			    @media screen and (max-width: $breakpoint_1){
-				    width: 2239px;
-				    height: 585px;
-				    top: -42rem;
-				    left: -111rem;
-			    }
-			    
-			    @media screen and (max-width: $breakpoint_2){
-				    width: 2087px;
-				    height: 554px;
-				    top: -39rem;
-				    left: -119rem;
-			    }
-			    
-			    @media screen and (max-width: $breakpoint_3){
-					left: -89rem;
-			    }
-			    
-			    @media screen and (max-width: $breakpoint_4){
-					left: -89rem;
-			    }
-			    
-			}
-			
-			p{
-				position: relative;
-				z-index: 3;
-			}
-		
-		}
-		
-	}
-					
-}
-
-@mixin info-logos-footer{
-					
-	background: $color_brand_white;
-    position: relative;
-    border-radius: 0;
-    border: 0px;
-	padding: 0;
-    &::before,
-    &::after {
-        content: "";
-        background: $color_brand_white;
-        display: block;
-        width: 40%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        @media screen and (max-width: $breakpoint_4){
-	        width: 100%;
-        }
-    }
-    &::after {
-        left: auto;
-        right: 100%;
-        display: none;
-        @media screen and (max-width: $breakpoint_4){
-	        display: block;
-        }
-    }
-    
-    @include inline-block(top);
-	@include grid-porcentaje(4);
-	float: left;
-	padding: 2rem 10px;
-	
-	@media screen and (max-width: $breakpoint_3){
-		@include grid-porcentaje(6);
-		padding: 2rem 10px;
-	}
-	
-	@media screen and (max-width: $breakpoint_4){
-		@include grid-porcentaje(12);
-		padding: 2rem 10px;
-	}
-	
-	.field--name-field-imagen-svg{
-		
-		.field--item{
-			@include inline-block(top);
-			@include grid-porcentaje(6);
-			float: left;
-			z-index: 3;
-			position: relative;
-		}
-		
-		p{
-			
-			// escuela logo
-			img{
-				@include inline-block(top);
-				@include grid-porcentaje(6);
-				float: left;
-			}
-			
-			// logo ueb
-			a{
-				@include inline-block(top);
-				@include grid-porcentaje(6);
-				float: left;
-				
-				img{
-					@include grid-porcentaje(12);
-				}
-				
-			}
-			
-		}
-		
-	}
-				    
-				
-}
-
-@mixin info-vigilada-footer{
-					
-	background: $color_brand_white;
-    position: relative;
-    border-radius: 0;
-    border: 0px;
-	padding: 0;
-    &::before,
-    &::after {
-        content: "";
-        background: $color_brand_white;
-        display: block;
-        width: 0;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        @media screen and (max-width: $breakpoint_3){
-	        width: 100%;
-        }
-    }
-    &::after {
-        left: auto;
-		right: 7%;
-		width: 400%;
-    }
-    
-    @include inline-block(top);
-	@include grid-porcentaje(12);
-	//float: left;
-	padding: 2rem;
-	
-	.field--name-body{
-		position: relative;
-		z-index: 3;
-		
-		p{
-			font-size: 12px;
-			text-align: center;
-			line-height: 16px;
-		}
-		
-	}
-					
-}
-
-// -----------------------------------------------------------------------
-// ----------------------- Mas informacion - form  ----------------------- //
-
-@mixin form-info{
-	
-	@include inline-block(top);
-	@include grid-porcentaje(10);
-	@include paragraph;
-	font-family: $font-basel;
-	word-break: break-word;
-	
-	@media screen and (max-width: $breakpoint_2){
-		@include grid-porcentaje(12);
-	}
-	
-	// more info text
-	#edit-texto-de-mas-informacion{
-		margin: 2rem 0 4rem;
-		@include inline-block(top);
-		@include grid-porcentaje(8);
-		
-		@media screen and (max-width: $breakpoint_2){
-			@include grid-porcentaje(10);
-		}
-		
-		@media screen and (max-width: $breakpoint_4){
-			@include grid-porcentaje(12);
-		}
-	}
-	
-	// name
-	.form-item-nombre-completo{
-		@include inline-block(top);
-		@include grid-porcentaje(6);
-		float: left;
-		
-		@media screen and (max-width: $breakpoint_4){
-			@include grid-porcentaje(12);
-			float: none;
-		}
-		
-		input{
-			@include input-form;
+			@include buton-s-green-line;
 		}
 		
 	}
 	
-	// phone
-	.form-item-telefono{
-		@include inline-block(top);
-		@include grid-porcentaje(6);
-		float: left;
-		
-		@media screen and (max-width: $breakpoint_4){
-			@include grid-porcentaje(12);
-			float: none;
-		}
-		
-		input{
-			@include grid-porcentaje(12);
-			@include input-form;
-		}
-		
-	}
-	
-	//email
-	.form-item-correo-electronico{
-		@include inline-block(top);
-		@include grid-porcentaje(6);
-		float: left;
-		
-		@media screen and (max-width: $breakpoint_4){
-			@include grid-porcentaje(12);
-			float: none;
-		}
-		
-		input{
-			@include input-form;
-		}
-		
-	}
-	
-	//doc
-	.form-item-documento-de-identidad{
-		@include inline-block(top);
-		@include grid-porcentaje(6);
-		float: left;
-		
-		@media screen and (max-width: $breakpoint_4){
-			@include grid-porcentaje(12);
-			float: none;
-		}
-		
-		input{
-			@include grid-porcentaje(12);
-			@include input-form;
-		}
-		
-	}
-	
-	input[type="checkbox"]{
-		display: block;
-	}
-	
-	// checkbox
-	#edit-deseo-realizar-la-inscripcion--wrapper{
-		@include inline-block(top);
-		@include grid-porcentaje(12);
-		float: none;
-		text-align: center;
-		margin: 1rem 0;
-		
-		legend{
-			color: $color_brand_white;
-			@include paragraph;
-			font-family: $font-basel;
-			font-weight: 100;
-			@include inline-block(top);
-			//@include grid-porcentaje(8);
-			float: left;
-			width: auto;
-		}
-		
-		.fieldset-wrapper{
-			@include inline-block(top);
-			//@include grid-porcentaje(4);
-			float: left;
-			min-width: 15rem;
-
-			
-			.js-webform-checkboxes{
-				
-				div{
-					
-					&:first-child{
-						@include inline-block(top);
-						@include grid-porcentaje(6);
-						float: left;
-						margin:  0;
-					}
-					
-					&:last-child{
-						@include inline-block(top);
-						@include grid-porcentaje(6);
-						float: left;
-						margin:  0;
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-	}
-	
-	// autorizo
-	.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion{
-		@include inline-block(top);
+	/////////////// right elements
+	// editor
+	.views-field-field-editor{
+		@include right-content-result;
 		font-family: $font-serif-italic;
-		float: left;
-		width: auto;
-	}
-	
-	// terminos y condiciones
-	#edit-terminos-y-condiciones{
-		@include inline-block(top);
-		@include paragraph;
-		font-family: $font-basel;
-		font-size: 13px;
-		letter-spacing: 1.5px;
-		float: left;
-		width: auto;
-		margin-bottom: 0;
-	    margin-top: 0.7rem;
-	    margin-left: 1rem;
-	    
-	    @media screen and (max-width: $breakpoint_4){
-			display: block;
-			margin: .7rem auto 0;
-			text-align: center;
-			float: none;
+		
+		@media only screen and (max-width: $breakpoint_4){
+			margin-top: 1.5rem;
 		}
 		
-		a{
-			color: $color_brand_white;
-			
-			&:after{
-				visibility: visible;
-				width: 100%;
-				background: $color_brand_white;
-			}
-			
-			&:hover{
-				&:after{
-					visibility: visible;
-					width: 0%;
-				}
-			}
-			
+		.views-label-field-editor{
+			//font-wei: $font-serif-italic;
+		}
+		
+		.field-content{
+			font-weight: bolder;
 		}
 		
 	}
 	
-	// send button
-	.webform-actions{
-		@include inline-block(top);
-		@include grid-porcentaje(12);
-		text-align: center;
-		margin-top: 1rem;
+	// autor
+	.views-field-field-autor-es-{
+		@include right-content-result;
+		margin-top: 1.5rem;
+		font-family: $font-serif-italic;
+		font-size: $font-baser-m;
 		
-		button{
-			@include buton-s-white-line;
+		@media only screen and (max-width: $breakpoint_4){
+			margin-bottom: 1.5rem;
+			margin-top: 0rem;
 		}
-		
 	}
 	
+	// año resultado
+	div[ class*="views-field-field-ano-numero-"]{
+		display: none;
+	}
+	
+}
 }

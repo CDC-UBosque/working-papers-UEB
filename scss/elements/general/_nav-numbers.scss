@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------
+// ----------------------- nav numbers ----------------------- //
+
+// container general
+div[role="main"]{
+	
+	.row{
+	
+		.region-content{
+			
+			section{
+				
+				.pager-nav {
+					
+					position: relative;
+					&::before,
+				    &::after {
+				        content: "";
+				        background: $color_brand_white;
+				        display: block;
+				        width: 100%;
+				        height: 100%;
+				        position: absolute;
+				        top: 0;
+				        left: 100%;
+				    }
+				    &::after {
+				        left: auto;
+				        right: 100%;
+				    }
+				    
+				    .pagination{
+					    
+					    border-radius: 0;
+						
+						.pager__item{
+							
+							a{
+								
+								color: $color_gray_50;
+								border: 0px;
+								font: $font-bsb-l $font-AG-regular;
+								position: relative;
+								
+								&:hover{
+									background: none;
+										&:after{
+										
+										position: absolute;
+										width: 100%;
+										content: "";
+										height: 4px;
+										background: $color_brand;
+										bottom: 0;
+										left: 0;
+										visibility: visible;
+	
+									}
+								}
+								
+							}
+							
+						}
+						
+						.is-active,
+						.active{
+							
+							a{
+								
+								color: $color_gray_80;
+								border: 0px;
+								position: relative;
+								background: none;
+								font-family: $font-AG-black;
+								
+								&:after{
+									
+									position: absolute;
+									width: 100%;
+									content: "";
+									height: 4px;
+									background: $color_brand;
+									bottom: 3%;
+									left: 0;
+									visibility: visible;
+
+								}
+								
+							}
+							
+						}
+						
+						.pager__item--next,
+						.pager__item--last,
+						.pager__item--first,
+						.pager__item--previous{
+							
+							a{
+								font-size: $font-bsb-m;
+								    padding-top: 2rem;
+							}
+							
+						}
+						
+				    }
+				    
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

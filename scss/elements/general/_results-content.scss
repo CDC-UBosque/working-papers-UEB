@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// ----------------------- remove drupal contextual block, home ----------------------- //
+// ----------------------- working papers results content ----------------------- //
 
 // container general
 div[role="main"]{
@@ -8,8 +8,12 @@ div[role="main"]{
 	
 		.region-content{
 			
-			>.views-element-container{
-				display: none;
+			.publicaciones-home{
+					
+				padding: 0;
+				
+				@include resultados;
+				
 			}
 			
 		}

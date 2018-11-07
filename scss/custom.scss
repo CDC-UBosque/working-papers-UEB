@@ -17,25 +17,15 @@
 
 // ------------------------------------ Custom styles ------------------------------------ 
 @import 'elements/general/_header';
-@import 'elements/general/_footer-interns';
 @import 'elements/general/_footer';
-@import 'elements/general/_mas-informacion';
-@import 'elements/general/_mas-informacion-interns';
-@import 'elements/general/_informes';
+@import 'elements/general/_working-papers-banners';
+@import 'elements/general/_working-papers-bg';
+@import 'elements/general/_results-content';
+@import 'elements/general/_results-search';
+@import 'elements/general/_nav-numbers';
 
 
 // ------------------------------------ Pages styles home ------------------------------------ 
-@import 'elements/home/_carrusel';
-@import 'elements/home/_proximos-cursos';
-@import 'elements/home/_experiencias';
-@import 'elements/home/_experiencia-personalizada';
-@import 'elements/home/_nuestra-metodologia';
-@import 'elements/home/_reunete';
 @import 'elements/home/_remove-drupal-block';
 
 // ------------------------------------ Pages ------------------------------------ 
-@import 'elements/pages/_banner';
-@import 'elements/pages/_repo-classes';
-@import 'elements/pages/_log';
-@import 'elements/pages/_cursos';
-@import 'elements/pages/_cursos-desc';

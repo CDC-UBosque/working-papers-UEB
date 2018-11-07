@@ -2,238 +2,25 @@
 // ----------------------- header ----------------------- //
 
 // container general
-.navbar.container {
+header.navbar.container{
 	
-	background: $color_brand_white;
-    position: relative;
-    //width: 100%;
-    margin-top: -15px;
-    border-radius: 0;
-    border: 0px;
-	padding: 0;
-	z-index: 99999999;
-    &::before,
-    &::after {
-        content: "";
-        background: $color_brand_white;
-        display: block;
-        //width: $bg-demasia-width;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 100%;
-    }
-    &::after {
-        left: auto;
-        right: 100%;
-    }
-    
-    // container
-    .navbar-header{
-	    float: none;
-	    @include inline-block(top);
-		@include grid-porcentaje(6);
+	background: none;
+	border: 0px;
+	margin-bottom: 0;
+	
+	.navbar-header{
+		float: none;
 		
-		@media screen and (max-width: $breakpoint_1){
-			width: auto;
-		}
-		
-		@media screen and (max-width: $breakpoint_2){
-			@include grid-porcentaje(12);
-		}
-	    
-	    .region-navigation{
-		    
-		    // make logo move to the left when responsive button appears
-		    @media screen and (max-width: $breakpoint_3){
-			    @include inline-block(top);
-				@include grid-porcentaje(10);
+		.cabezote-logo{
+			text-align: center;
+			
+			img{
+				display: initial;
+				border-bottom: 6px solid $color_orange;
 			}
 			
-			// make logo move to the left when responsive button appears
-		    @media screen and (max-width: $breakpoint_4){
-				@include grid-porcentaje(12);
-			}
-		    
-		    // logo
-		    section{
-				text-align: right;
-				margin: 1rem 0;
-				
-				.field--name-field-imagen-svg{
-					
-					.field--item{
-						 &:nth-child(1){
-						    position: absolute;
-							left: 0;
-							max-width: 130px;
-						    height: auto;
-							z-index: 1;
-					    }
-					    
-					    &:nth-child(2){
-						    padding-top: 0.6rem;
-							margin-left: 13rem;
-						    img{
-								display: initial;
-						    }
-					    }
-					}
-					
-				}
-				
-			    .field--name-body{
-				    
-				    p{
-					    img{
-						    // logo UEB positioning
-						    &:nth-child(1){
-							    position: absolute;
-								left: 0;
-								max-width: 130px;
-							    height: auto;
-						    }
-						    
-						    &:nth-child(2){
-							    max-width: 266px;
-							    height: auto;
-						    }
-					    }
-				    }
-				    
-			    }
-		    }
-		    
-	    }
-	    
-	    // button responsive
-	    .navbar-toggle{
-			background: $color_ec_mag;
-		    border: 1px solid $color_ec_mag;
-		    border-radius: 0px;
-		    margin: 2rem 1rem 0;
-		    transition: all .2s ease-in-out;
-		    
-		    &:hover,
-		    &[aria-expanded="true"]{
-			    background: $color_brand_white;
-			    
-			    span{
-				    background: $color_ec_mag;
-			    }
-			    
-		    }
-			
-			// make responsive button place to the right when appears
-		     @media screen and (max-width: $breakpoint_3){
-			    @include inline-block(top);
-			}
-			
-			
-		     @media screen and (max-width: $breakpoint_4){
-			    margin: 1rem;
-			}
-			
-			span{
-				background: $color_brand_white;
-			}
-			
-	    }
-	    
-    }
-    
-    //menu
-    .navbar-collapse{
-	    @include inline-block(top);
-		@include grid-porcentaje(6);
-		float: right;
-		
-		
-		@media screen and (max-width: $breakpoint_1){
-			width: auto;
-			text-align: right;
 		}
 		
-		@media screen and (max-width: $breakpoint_2){
-			@include grid-porcentaje(12);
-			background: $color_brand_white;
-			position: relative;
-			border-radius: 0;
-			border: 0px;
-			padding: 0;
-			&::before,
-			&::after {
-			    content: "";
-			    background: $color_brand_white;
-			    display: block;
-			    width: 100%;
-			    height: 100%;
-			    position: absolute;
-			    top: 0;
-			    left: 100%;
-			}
-			&::after {
-			    left: auto;
-			    right: 100%;
-			}
-		}
-		
-		@media screen and (max-width: $breakpoint_3){
-			display: none;
-		}
-		
-		// nav
-		    nav{
-				margin: 1.3rem 0;
-				display: inline-block;
-				
-				.navbar-nav{
-					
-					@media screen and (max-width: $breakpoint_3){
-						margin: 0;
-					}
-					
-					li{
-						
-						a{
-							@include links-menu;
-							padding: 10px 10px;
-						}
-						
-					}
-					
-					li.active{
-						
-						a{
-							background: none;
-							&:after{
-								visibility: visible;
-								width: 100%;
-							}
-						}
-						
-					}
-					
-				}
-				
-		    }
-		
-    }
-    
-    // fix responsive close button
-    .navbar-collapse[aria-expanded="false"]{
-	    @media screen and (max-width: $breakpoint_3){
-			display: none;
-		}
-    }
-    
-    .navbar-collapse[aria-expanded="true"]{
-	    @media screen and (max-width: $breakpoint_3){
-			display: block;
-		    float: none;
-		    overflow: hidden;
-		}
-    }
+	}
 	
 }
