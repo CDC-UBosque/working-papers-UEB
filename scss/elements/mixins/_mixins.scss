@@ -169,6 +169,7 @@
 	padding: 4rem;
 	border-bottom: 1px solid $color_gray_50;
 	display: inline-block;
+	word-break: break-word;
 	
 	@media only screen and (max-width: $breakpoint_2){
 		padding: 2rem;
